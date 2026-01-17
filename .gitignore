@@ -56,8 +56,8 @@ buck-out/
 tmp/
 DemoApp/package-lock.json
 
-# Expo plugin build output
-plugin/build
+# Expo plugin build output - NOT ignored, needed for GitHub installs
+# plugin/build
 
 # DemoExpoApp generated folders
 DemoExpoApp/android

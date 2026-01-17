@@ -1,0 +1,1 @@
+{"version":3,"file":"withSnowplowAndroid.js","sourceRoot":"","sources":["../src/withSnowplowAndroid.ts"],"names":[],"mappings":"AAAA,OAAO,EAAgB,mBAAmB,EAAE,MAAM,sBAAsB,CAAC;AAEzE,MAAM,CAAC,MAAM,mBAAmB,GAAiB,CAAC,MAAM,EAAE,EAAE;IAC1D,OAAO,mBAAmB,CAAC,MAAM,EAAE,CAAC,MAAM,EAAE,EAAE;QAC5C,0DAA0D;QAC1D,kEAAkE;QAClE,OAAO,MAAM,CAAC;IAChB,CAAC,CAAC,CAAC;AACL,CAAC,CAAC"}

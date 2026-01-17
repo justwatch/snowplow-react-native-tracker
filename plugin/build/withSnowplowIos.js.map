@@ -1,0 +1,1 @@
+{"version":3,"file":"withSnowplowIos.js","sourceRoot":"","sources":["../src/withSnowplowIos.ts"],"names":[],"mappings":"AAAA,OAAO,EAAgB,aAAa,EAAE,MAAM,sBAAsB,CAAC;AAEnE,MAAM,CAAC,MAAM,eAAe,GAAiB,CAAC,MAAM,EAAE,EAAE;IACtD,OAAO,aAAa,CAAC,MAAM,EAAE,CAAC,MAAM,EAAE,EAAE;QACtC,8DAA8D;QAC9D,OAAO,MAAM,CAAC;IAChB,CAAC,CAAC,CAAC;AACL,CAAC,CAAC"}
