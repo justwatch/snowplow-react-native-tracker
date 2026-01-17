@@ -90,7 +90,7 @@ const gcProps = [
  * @param defaultKeys {Array} - the default keys to validate against
  * @returns - boolean
  */
-function isValidConfig<Type>(config: Type, defaultKeys: Array<string>): config is Type {
+function isValidConfig<Type extends object>(config: Type, defaultKeys: Array<string>): config is Type {
   return Object.keys(config).every(key => defaultKeys.includes(key));
 }
 

@@ -3,5 +3,10 @@
   "compilerOptions": {
     "types": ["jest"],
     "noEmit": true
-  }
+  },
+  "include": [
+    "__tests__/**/*.ts",
+    "__mocks__/**/*.js",
+    "../src/**/*.ts"
+  ]
 }

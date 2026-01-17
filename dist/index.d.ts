@@ -1,31 +1,31 @@
 /**
  * HttpMethod type
  */
-declare type HttpMethod = "post" | "get";
+type HttpMethod = "post" | "get";
 /**
  * DevicePlatform type
  */
-declare type DevicePlatform = "web" | "mob" | "pc" | "srv" | "app" | "tv" | "cnsl" | "iot";
+type DevicePlatform = "web" | "mob" | "pc" | "srv" | "app" | "tv" | "cnsl" | "iot";
 /**
  * LogLevel type
  */
-declare type LogLevel = "off" | "error" | "debug" | "verbose";
+type LogLevel = "off" | "error" | "debug" | "verbose";
 /**
  * BasisForProsessing
  */
-declare type Basis = "consent" | "contract" | "legal_obligation" | "legitimate_interests" | "public_task" | "vital_interests";
+type Basis = "consent" | "contract" | "legal_obligation" | "legitimate_interests" | "public_task" | "vital_interests";
 /**
  * BufferOption
  */
-declare type BufferOption = "single" | "default" | "large";
+type BufferOption = "single" | "default" | "large";
 /**
  * ScreenSize
  */
-declare type ScreenSize = [number, number];
+type ScreenSize = [number, number];
 /**
  * SelfDescribing type
  */
-declare type SelfDescribing = {
+type SelfDescribing = {
     /**
      * Schema
      */
@@ -38,7 +38,7 @@ declare type SelfDescribing = {
 /**
  * EventContext type
  */
-declare type EventContext = SelfDescribing;
+type EventContext = SelfDescribing;
 /**
  * NetworkConfiguration
  */
@@ -256,7 +256,7 @@ interface GlobalContext {
 /**
  * Global Contexts configuration
  */
-declare type GCConfiguration = GlobalContext[];
+type GCConfiguration = GlobalContext[];
 /**
  * The TrackerControllerConfiguration
  */
@@ -272,7 +272,7 @@ interface TrackerControllerConfiguration {
  * ScreenView event properties
  * schema: iglu:com.snowplowanalytics.mobile/screen_view/jsonschema/1-0-0
  */
-declare type ScreenViewProps = {
+type ScreenViewProps = {
     /**
      * The name of the screen viewed
      */
@@ -305,7 +305,7 @@ declare type ScreenViewProps = {
 /**
  * Structured event properties
  */
-declare type StructuredProps = {
+type StructuredProps = {
     /**
      * The category of the event
      */
@@ -338,7 +338,7 @@ declare type StructuredProps = {
 /**
  * PageView event properties
  */
-declare type PageViewProps = {
+type PageViewProps = {
     /**
      * The page URL
      */
@@ -355,7 +355,7 @@ declare type PageViewProps = {
 /**
  * Timing event properties
  */
-declare type TimingProps = {
+type TimingProps = {
     /**
      * The timing category
      */
@@ -415,7 +415,7 @@ interface ConsentWithdrawnProps extends ConsentDocument {
 /**
  * EcommerceItem
  */
-declare type EcommerceItem = {
+type EcommerceItem = {
     sku: string;
     price: number;
     quantity: number;
@@ -426,7 +426,7 @@ declare type EcommerceItem = {
 /**
  * EcommerceTransaction event properties
  */
-declare type EcommerceTransactionProps = {
+type EcommerceTransactionProps = {
     orderId: string;
     totalValue: number;
     items: EcommerceItem[];
@@ -441,7 +441,7 @@ declare type EcommerceTransactionProps = {
 /**
  * The ReactNativeTracker type
  */
-declare type ReactNativeTracker = {
+type ReactNativeTracker = {
     /**
      * Tracks a self-descibing event
      *
@@ -637,4 +637,5 @@ declare function removeTracker(trackerNamespace: string): Promise<boolean>;
  */
 declare function removeAllTrackers(): Promise<boolean>;
 
-export { Basis, BufferOption, ConsentDocument, ConsentGrantedProps, ConsentWithdrawnProps, DevicePlatform, EcommerceItem, EcommerceTransactionProps, EmitterConfiguration, EventContext, GCConfiguration, GdprConfiguration, GlobalContext, HttpMethod, LogLevel, NetworkConfiguration, PageViewProps, ReactNativeTracker, ScreenSize, ScreenViewProps, SelfDescribing, SessionConfiguration, StructuredProps, SubjectConfiguration, TimingProps, TrackerConfiguration, TrackerControllerConfiguration, createTracker, removeAllTrackers, removeTracker };
+export { createTracker, removeAllTrackers, removeTracker };
+export type { Basis, BufferOption, ConsentDocument, ConsentGrantedProps, ConsentWithdrawnProps, DevicePlatform, EcommerceItem, EcommerceTransactionProps, EmitterConfiguration, EventContext, GCConfiguration, GdprConfiguration, GlobalContext, HttpMethod, LogLevel, NetworkConfiguration, PageViewProps, ReactNativeTracker, ScreenSize, ScreenViewProps, SelfDescribing, SessionConfiguration, StructuredProps, SubjectConfiguration, TimingProps, TrackerConfiguration, TrackerControllerConfiguration };

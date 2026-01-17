@@ -2,27 +2,31 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json',
+    project: ['./tsconfig.eslint.json'],
     ecmaVersion: 6,
     ecmaFeatures: {
       impliedStrict: true,
+      jsx: true,
     },
     sourceType: 'module',
   },
-  ignorePatterns: ['.eslintrc.js'],
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'eslint:recommended'
-  ],
+  ignorePatterns: ['.eslintrc.cjs', 'rollup.config.js', 'src/react-native.d.ts'],
+  env: {
+    es6: true,
+    node: true,
+  },
+  globals: {
+    __DEV__: 'readonly',
+  },
   plugins: [
     '@typescript-eslint',
-    'jest'
+    'promise'
   ],
-  env: {
-    node:true,
-    'jest/globals': true,
-    jest: true
-  },
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:promise/recommended',
+    'eslint:recommended'
+  ],
   rules: {
     // eslint
     'consistent-return': ['warn'],
@@ -44,14 +48,26 @@ module.exports = {
     'require-await': ['warn'],
     'require-atomic-updates': ['warn'],
     semi: ['warn', 'always'],
+    // promise plugin
+    'promise/always-return': ['warn'],
+    'promise/avoid-new': ['warn'],
+    'promise/catch-or-return': ['warn'],
+    'promise/no-callback-in-promise': ['warn'],
+    'promise/no-native': 'off',
+    'promise/no-nesting': ['warn'],
+    'promise/no-new-statics': ['warn'],
+    'promise/no-promise-in-callback': ['warn'],
+    'promise/no-return-in-finally': ['warn'],
+    'promise/no-return-wrap': ['warn'],
+    'promise/param-names': ['warn'],
+    'promise/valid-params': ['warn'],
     // typescript
-    '@typescript-eslint/no-explicit-any': ['off'],
-    '@typescript-eslint/no-unsafe-assignment': ['off'],
     '@typescript-eslint/explicit-function-return-type': ['warn'],
     '@typescript-eslint/no-floating-promises': ['warn', { ignoreVoid: false }],
     '@typescript-eslint/no-misused-promises': ['warn'],
     '@typescript-eslint/no-unnecessary-condition': ['warn'],
     '@typescript-eslint/no-unnecessary-type-constraint': ['warn'],
+    '@typescript-eslint/no-unsafe-assignment': ['warn'],
     '@typescript-eslint/no-unsafe-return': ['warn'],
     '@typescript-eslint/no-unused-vars': ['warn'],
     '@typescript-eslint/no-use-before-define': ['warn'],

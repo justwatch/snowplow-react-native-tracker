@@ -95,7 +95,6 @@ function isObject(x) {
 const logMessages = {
     // configuration errors
     namespace: 'namespace parameter is required to be set',
-    endpoint: 'endpoint parameter is required to be set',
     network: 'networkConfig is invalid',
     tracker: 'trackerConfig is invalid',
     session: 'sessionConfig is invalid',

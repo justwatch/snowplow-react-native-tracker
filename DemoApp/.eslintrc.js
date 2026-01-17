@@ -1,14 +1,11 @@
 module.exports = {
   root: true,
-  extends: '@react-native-community',
-  plugins: ['jest', 'detox'],
+  extends: '@react-native',
   overrides: [
     {
       files: ['tests/**'],
       env: {
-        'detox/detox': true,
         jest: true,
-        'jest/globals': true,
       },
     },
   ],

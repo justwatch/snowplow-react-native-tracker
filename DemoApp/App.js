@@ -3,7 +3,6 @@
  * https://github.com/facebook/react-native
  *
  * @format
- * @flow strict-local
  */
 
 import React from 'react';
@@ -18,13 +17,21 @@ import {
   Button,
 } from 'react-native';
 
-import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
-
 import {
   createTracker,
   removeTracker,
   // removeAllTrackers,
 } from '@snowplow/react-native-tracker';
+
+const Colors = {
+  white: '#fff',
+  black: '#000',
+  light: '#ddd',
+  dark: '#333',
+  lighter: '#f3f3f3',
+  darker: '#222',
+  primary: '#6200EE',
+};
 
 const Section = ({children, title}) => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -48,6 +55,16 @@ const Section = ({children, title}) => {
         ]}>
         {children}
       </Text>
+    </View>
+  );
+};
+
+const Header = () => {
+  const isDarkMode = useColorScheme() === 'dark';
+  return (
+    <View style={[styles.header, {backgroundColor: Colors.primary}]}>
+      <Text style={styles.headerTitle}>Snowplow React Native Tracker</Text>
+      <Text style={styles.headerSubtitle}>Demo Application</Text>
     </View>
   );
 };
@@ -426,6 +443,21 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
+  },
+  header: {
+    padding: 24,
+    paddingTop: 48,
+  },
+  headerTitle: {
+    fontSize: 28,
+    fontWeight: '700',
+    color: Colors.white,
+  },
+  headerSubtitle: {
+    fontSize: 16,
+    color: Colors.white,
+    opacity: 0.8,
+    marginTop: 4,
   },
 });
 
