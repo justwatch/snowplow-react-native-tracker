@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.platforms    = { :ios => "11.0", :tvos => "11.0" }
 
-  s.source       = { :git => "https://github.com/micheleb/snowplow-react-native-tracker.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/justwatch/snowplow-react-native-tracker.git", :tag => "#{s.version}" }
   s.source_files = "ios/**/*.{h,m}"
 
   s.requires_arc = true
