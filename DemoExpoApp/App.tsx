@@ -75,7 +75,7 @@ const App = () => {
   const tracker = createTracker(
     'sp1',
     {
-      endpoint: 'placeholder',
+      endpoint: 'http://localhost:9090',
     },
     {
       trackerConfig: {
@@ -114,7 +114,7 @@ const App = () => {
   const secTracker = createTracker(
     'sp2',
     {
-      endpoint: 'placeholder',
+      endpoint: 'http://localhost:9090',
     },
     {
       trackerConfig: {
@@ -191,6 +191,16 @@ const App = () => {
       value: 50.1,
     });
     tracker.trackStructuredEvent({ category: 'SeTest', action: 'onlyRequired' });
+  };
+
+  const onPressTrackStructuredWithPageUrl = () => {
+    tracker.trackStructuredEvent({
+      category: 'NavigationTest',
+      action: 'pageVisit',
+      label: 'withPageUrlAndReferrer',
+      pageUrl: 'https://example.com/current-page',
+      referrer: 'https://example.com/previous-page',
+    });
   };
 
   const onPressTrackPageViewEvent = () => {
@@ -308,6 +318,14 @@ const App = () => {
               title="Track some Structured Events"
               color="#841584"
               accessibilityLabel="testStruct"
+            />
+          </Section>
+          <Section title="Structured with Page URL">
+            <Button
+              onPress={onPressTrackStructuredWithPageUrl}
+              title="Track Structured with pageUrl & referrer"
+              color="#841584"
+              accessibilityLabel="testStructWithPageUrl"
             />
           </Section>
           <Section title="Page Views">

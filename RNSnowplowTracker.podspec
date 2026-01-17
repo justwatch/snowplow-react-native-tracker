@@ -20,5 +20,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency "React-Core"
+  # Note: For pageUrl/referrer support, we use a forked SnowplowTracker.
+  # The Expo plugin adds the git source override automatically.
   s.dependency "SnowplowTracker", "~> 2.2"
 end
