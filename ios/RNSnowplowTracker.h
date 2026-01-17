@@ -25,6 +25,7 @@
 #endif
 
 #import <Foundation/Foundation.h>
+
 @class SPTracker;
 
 @interface RNSnowplowTracker : NSObject <RCTBridgeModule>

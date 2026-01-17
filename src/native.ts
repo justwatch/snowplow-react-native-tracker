@@ -15,7 +15,7 @@
 
 import { NativeModules } from 'react-native';
 
-const { RNSnowplowTracker } = NativeModules;
+const RNSnowplowTracker = NativeModules.RNSnowplowTracker;
 
 export {
   RNSnowplowTracker

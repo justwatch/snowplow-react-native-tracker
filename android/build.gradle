@@ -50,5 +50,6 @@ dependencies {
     // Required Dependency for the Tracker
     implementation "com.squareup.okhttp3:okhttp:4.12.0"
     implementation "com.facebook.react:react-android:+"
-    compileOnly files("lib/snowplow-android-tracker-release.aar")
+    // IMPORTANT: Custom AAR with pageUrl/referrer support - DO NOT replace with Maven dependency
+    implementation files("lib/snowplow-android-tracker-release.aar")
 }
