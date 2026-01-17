@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "DemoExpoApp",
+    "slug": "demo-expo-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "demoexpoapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.snowplow.demoexpoapp"
+    },
+    "android": {
+      "package": "com.snowplow.demoexpoapp"
+    },
+    "plugins": [
+      "@snowplow/react-native-tracker"
+    ]
+  }
+}

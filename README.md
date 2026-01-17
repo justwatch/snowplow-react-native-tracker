@@ -49,6 +49,48 @@ The Snowplow React Native Tracker also provides first-class support for TypeScri
 See also our [DemoApp][demoapp] for an example implementation.
 
 
+## Expo Support
+
+This library supports [Expo][expo] projects (SDK 52+) with a config plugin that handles native configuration automatically.
+
+### Installation
+
+```bash
+npx expo install @snowplow/react-native-tracker
+```
+
+The config plugin is applied automatically. Then generate the native projects:
+
+```bash
+npx expo prebuild
+```
+
+### Running the app
+
+```bash
+npx expo run:android
+# or
+npx expo run:ios
+```
+
+### Usage
+
+Usage is identical to standard React Native projects:
+
+```javascript
+import { createTracker } from '@snowplow/react-native-tracker';
+
+const tracker = createTracker(
+    'my-namespace',
+    { endpoint: 'https://my-collector.endpoint' }
+);
+
+tracker.trackScreenViewEvent({ name: 'myScreenName' });
+```
+
+See also our [DemoExpoApp][demoexpoapp] for an example Expo implementation.
+
+
 ## Find out more
 
 | Technical Docs                    | Setup Guide                 |
@@ -105,6 +147,14 @@ bash .scripts/cleanBuildAndRun.sh ios
 bash .scripts/cleanBuildAndRun.sh both
 ```
 
+
+### Testing with Snowplow Micro
+
+When testing with [Snowplow Micro][snowplow-micro] running on your host machine (default port 9090):
+
+- **Android Emulator**: Use `http://10.0.2.2:9090` as the endpoint (10.0.2.2 is the emulator's alias for host localhost)
+- **iOS Simulator**: Use `http://localhost:9090` as the endpoint
+- **Physical devices**: Use your machine's local IP address, e.g., `http://192.168.x.x:9090`
 
 ### End-to-end tests
 
@@ -221,6 +271,8 @@ limitations under the License.
 [android-tracker]: https://github.com/snowplow/snowplow-android-tracker
 
 [demoapp]: https://github.com/snowplow-incubator/snowplow-react-native-tracker/tree/master/DemoApp
+[demoexpoapp]: https://github.com/snowplow-incubator/snowplow-react-native-tracker/tree/master/DemoExpoApp
+[expo]: https://expo.dev
 [gh-actions-workflows]: https://github.com/snowplow-incubator/snowplow-react-native-tracker/tree/master/.github/workflows
 [detox]: https://github.com/wix/Detox
 [detox-android-env]: https://github.com/wix/Detox/blob/master/docs/Introduction.AndroidDevEnv.md

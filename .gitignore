@@ -55,3 +55,12 @@ buck-out/
 
 tmp/
 DemoApp/package-lock.json
+
+# Expo plugin build output
+plugin/build
+
+# DemoExpoApp generated folders
+DemoExpoApp/android
+DemoExpoApp/ios
+DemoExpoApp/.expo
+DemoExpoApp/node_modules
