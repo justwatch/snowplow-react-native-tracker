@@ -31,6 +31,14 @@ npm install --save @snowplow/react-native-tracker
 npx pod-install
 ```
 
+If you want to publish the library, you'll need to
+
+```
+cp .npmrc.template .npmrc
+```
+
+and set your GitHub `AUTH_TOKEN` in there.
+
 Then, instrument the tracker in your app and start tracking events. For example:
 
 ```javascript

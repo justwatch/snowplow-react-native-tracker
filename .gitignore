@@ -64,3 +64,6 @@ DemoExpoApp/android
 DemoExpoApp/ios
 DemoExpoApp/.expo
 DemoExpoApp/node_modules
+
+# this repo is public!
+.npmrc
