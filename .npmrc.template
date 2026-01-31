@@ -1,4 +1,4 @@
 @justwatch:registry=https://npm.pkg.github.com
 
-# Add your classic token. Must have repo and write:packages
-//npm.pkg.github.com/:_authToken=AUTH_TOKEN
+# must have repo and write:packages
+//npm.pkg.github.com/:_authToken=YOUR_AUTH_TOKEN

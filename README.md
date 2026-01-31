@@ -37,7 +37,7 @@ If you want to publish the library, you'll need to
 cp .npmrc.template .npmrc
 ```
 
-and set your GitHub `AUTH_TOKEN` in there.
+and set your GitHub `AUTH_TOKEN` in there. When you want to release, bump the `version` in `package.json`, and run `npm run build && npm publish`.
 
 Then, instrument the tracker in your app and start tracking events. For example:
 

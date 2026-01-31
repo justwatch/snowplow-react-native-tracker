@@ -12,11 +12,11 @@ export const withSnowplowIos: ConfigPlugin = (config) => {
         let podfileContent = fs.readFileSync(podfilePath, 'utf-8');
 
         // Check if the override is already added
-        if (!podfileContent.includes('micheleb/snowplow-objc-tracker')) {
+        if (!podfileContent.includes('justwatch/snowplow-objc-tracker')) {
           // Add the forked SnowplowTracker pod override before the first target declaration
           const forkedPodLine = `
 # Use forked SnowplowTracker with pageUrl/referrer support
-pod 'SnowplowTracker', :git => 'https://github.com/micheleb/snowplow-objc-tracker.git', :branch => 'master'
+pod 'SnowplowTracker', :git => 'https://github.com/justwatch/snowplow-objc-tracker.git', :branch => 'master'
 
 `;
           // Insert before the first 'target' declaration
